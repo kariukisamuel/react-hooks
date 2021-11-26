@@ -17,7 +17,7 @@ const EffectHook = () => {
   }, [])
 
   return (
-    <div className="card p-3 m-2">
+    <div className="card p-5 m-2">
       <h3 className="py-2">UseEffect Hook Example</h3>
       <table className="table table-striped">
         <thead>
@@ -30,13 +30,14 @@ const EffectHook = () => {
         </thead>
         <tbody>
             {
-            users.map((user) =>(          
-                <tr >
-                    <th scope="row">{user.id}</th>
-                    <td>{user.name}</td>
-                    <td>{user.username}</td>
-                    <td>{user.email}</td>
-                </tr>
+            users.map((user,index) =>(  
+                 index < 5 &&      
+                    <tr key={index}>
+                        <th scope="row">{user.id}</th>
+                        <td>{user.name}</td>
+                        <td>{user.username}</td>
+                        <td>{user.email}</td>
+                    </tr>
             ))
             }
 

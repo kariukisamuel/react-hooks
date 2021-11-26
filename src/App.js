@@ -1,6 +1,7 @@
-import './App.css';
-import StateHook from './components/StateHook';
+import './App.css'
+import StateHook from './components/StateHook'
 import EffectHook from './components/EffectHook'
+import ReducerHook from './components/ReducerHook';
 
 function App() {
   return (
@@ -11,6 +12,9 @@ function App() {
         </div>
         <div className="col-md-6">
           <EffectHook/>
+        </div>
+        <div className="col-md-6">
+          <ReducerHook/>
         </div>
       </div>
     </div>
